@@ -103,7 +103,7 @@ Ces pratiques assurent une qualité constante et un déploiement sécurisé.
 
 ## 📂 Fichiers du projet
 
-| Fichier                         | Description                                                                 |
+| Fichier                        | Description                                                                 |
 |--------------------------------|-----------------------------------------------------------------------------|
 | `Ice_Classification.ipynb`     | Notebook Python avec tout le pipeline : nettoyage, modélisation, validation |
 | `data/raw/data_Features.csv`   | Données d'entrée : température, vents, glace de mer, décharges, etc.        |
@@ -112,7 +112,7 @@ Ces pratiques assurent une qualité constante et un déploiement sécurisé.
 | `Dockerfile`                   | Script pour construire l’image Docker du projet                             |
 | `.github/workflows/ci.yml`     | Pipeline GitHub Actions pour CI/CD                                          |
 | `.gitignore`                   | Fichiers et dossiers ignorés par Git                                        |
-| `README.md`                   | Documentation complète du projet                                            |
+| `README.md`                    | Documentation complète du projet                                            |
 
 ---
 
