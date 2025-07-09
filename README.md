@@ -107,7 +107,7 @@ Ces pratiques assurent une qualité constante et un déploiement sécurisé.
 |--------------------------------|-----------------------------------------------------------------------------|
 | `Ice_Classification.ipynb`     | Notebook Python avec tout le pipeline : nettoyage, modélisation, validation |
 | `data/raw/data_Features.csv`   | Données d'entrée : température, vents, glace de mer, décharges, etc.        |
-| `data/raw/data_Targets.csv`    | Variable cible (`Y1`), binarisée pour la classification                      |
+| `data/raw/data_Targets.csv`    | Variable cible (`Y1`), binarisée pour la classification                     |
 | `requirements.txt`             | Liste des librairies nécessaires à l’exécution du projet                    |
 | `Dockerfile`                   | Script pour construire l’image Docker du projet                             |
 | `.github/workflows/ci.yml`     | Pipeline GitHub Actions pour CI/CD                                          |
