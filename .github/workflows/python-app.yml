@@ -1,0 +1,48 @@
+name: Python CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.8'
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run notebook (check execution)
+      run: |
+        pip install nbconvert
+        jupyter nbconvert --to notebook --execute Ice_Classification.ipynb --output executed.ipynb
+
+    - name: Run unit tests
+      run: |
+        pip install pytest
+        pytest --maxfail=1 --disable-warnings -q
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.8'
+
+      - name: Install pylint
+        run: pip install pylint
+
+      - name: Run pylint
+        run: pylint ice_classification --exit-zero
