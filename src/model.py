@@ -2,27 +2,29 @@ from typing import Dict, Any
 import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator
-from sklearn.model_selection import train_test_split, GridSearchCV, cross_val_predict
+from sklearn.model_selection import train_test_split, GridSearchCV
 from ice_classification.preprocessing import binarize_target
 from sklearn.metrics import (
     f1_score, accuracy_score,
     classification_report, confusion_matrix
 )
 
+
 def train_model_gridsearch(
     X: pd.DataFrame,
     y: pd.Series,
     model_class: BaseEstimator,
     param_grid: dict,
-    test_size: float=0.2
-)->Dict[str, Any]:
-    """
-    Entraîne un modèle avec GridSearchCV et détermine le seuil optimal pour le F1-score.
+    test_size: float = 0.2
+) -> Dict[str, Any]:
+    """Entraîne un modèle avec GridSearchCV et détermine le seuil
+    optimal pour le F1-score.
 
     Args:
         X (pd.DataFrame): Features.
         y (pd.Series): Niveau de glasse (Cible).
-        model_class (sklearn.base.BaseEstimator): Classe du modèle (ex: RandomForestClassifier).
+        model_class (sklearn.base.BaseEstimator): Classe du modèle
+        (ex: RandomForestClassifier).
         param_grid (dict): Grille des hyperparamètres.
         test_size (float): Proportion du test set.
         random_state (int): Pour reproductibilité.
@@ -46,7 +48,10 @@ def train_model_gridsearch(
     best_model = grid_search.best_estimator_
     y_probs = best_model.predict_proba(X_test)[:, 1]
     thresholds = np.arange(0.0, 1.0, 0.01)
-    f1_scores = [(f1_score(y_test, (y_probs >= t).astype(int))) for t in thresholds]
+    f1_scores = [(f1_score(
+        y_test,
+        (y_probs >= t).astype(int)
+    )) for t in thresholds]
     optimal_idx = np.argmax(f1_scores)
     optimal_threshold = thresholds[optimal_idx]
     optimal_f1 = f1_scores[optimal_idx]

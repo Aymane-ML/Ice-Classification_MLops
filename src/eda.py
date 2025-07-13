@@ -23,6 +23,7 @@ def plot_target_distribution(
     plt.grid()
     plt.show()
 
+
 def summarize_target(
     y: Union[pd.Series, list]
 ) -> None:

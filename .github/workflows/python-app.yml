@@ -41,8 +41,11 @@ jobs:
         with:
           python-version: '3.8'
 
-      - name: Install pylint
-        run: pip install pylint
+      - name: Install pylint and flake8
+        run: pip install pylint flake8
 
       - name: Run pylint
-        run: pylint ice_classification --exit-zero
+        run: pylint src --exit-zero
+
+      - name: Run flake8
+        run: flake8 src --exit-zero
