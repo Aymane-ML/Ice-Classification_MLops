@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator
 from sklearn.model_selection import train_test_split, GridSearchCV
-from ice_classification.preprocessing import binarize_target
+from src.preprocessing import binarize_target
 from sklearn.metrics import (
     f1_score, accuracy_score,
     classification_report, confusion_matrix

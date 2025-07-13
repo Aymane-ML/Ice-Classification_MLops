@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import pytest
 from sklearn.preprocessing import StandardScaler
-from ice_classification import preprocessing 
+from src import preprocessing 
 
 def test_load_data(tmp_path):
     df_features = pd.DataFrame({

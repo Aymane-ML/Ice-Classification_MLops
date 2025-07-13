@@ -1,7 +1,8 @@
 import numpy as np
 import pytest
 from typing import Dict
-from ice_classification import utils
+from src import utils
+
 
 def test_plot_roc_curve(
     monkeypatch: pytest.MonkeyPatch
