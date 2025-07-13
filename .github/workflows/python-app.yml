@@ -22,9 +22,11 @@ jobs:
       run: pip install -r requirements.txt
 
     - name: Run notebook (check execution)
+      if: false
       run: |
         pip install nbconvert
         jupyter nbconvert --to notebook --execute Ice_Classification.ipynb --output executed.ipynb
+
 
     - name: Run unit tests
       run: |

@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import pytest
 from typing import Union, List
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from ice_classification import eda
+from src import eda
 
 def test_plot_target_distribution(
 )->None:

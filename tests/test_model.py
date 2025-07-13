@@ -2,7 +2,7 @@ import pytest
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
-from ice_classification import model
+from src import model
 
 def test_train_model_gridsearch():
     np.random.seed(42)
