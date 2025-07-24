@@ -2,7 +2,6 @@ from typing import Dict, Any, List, Tuple
 import numpy as np
 import pandas as pd
 import mlflow
-mlflow.set_tracking_uri("file:///tmp/mlruns")
 import mlflow.sklearn
 from sklearn.base import clone
 from sklearn.base import BaseEstimator
@@ -12,6 +11,8 @@ from sklearn.metrics import (
     f1_score, accuracy_score,
     classification_report, confusion_matrix
 )
+
+mlflow.set_tracking_uri("file:///tmp/mlruns")
 
 
 def train_model_gridsearch(
