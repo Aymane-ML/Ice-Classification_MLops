@@ -1,8 +1,8 @@
-import pytest
 import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from src import model
+
 
 def test_train_model_gridsearch():
     np.random.seed(42)
@@ -19,7 +19,13 @@ def test_train_model_gridsearch():
     param_grid = {
         'C': [0.1, 1.0]
     }
-    results = model.train_model_gridsearch(X, y, model_class, param_grid, test_size=0.2)
+    results = model.train_model_gridsearch(
+        X,
+        y,
+        model_class,
+        param_grid,
+        test_size=0.2
+    )
     expected_keys = {
         "best_model", "best_params", "cv_best_f1",
         "optimal_threshold", "f1_score", "accuracy",

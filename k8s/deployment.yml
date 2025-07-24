@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ice-classification-mlops
+spec:
+  replicas: 2
+  selector:
+    matchlabels:
+      app: ice-classification-mlops
+  template:
+    metadata:
+      labels:
+        app: ice-clssification-mlops
+    spec:
+      containers:
+      - name: mlops-container
+        image: ghcr.io/<Aymane-ML>/ice-classification-mlops:latest
+        ports:
+        - containerPort: 8888

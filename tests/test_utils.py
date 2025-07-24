@@ -1,12 +1,11 @@
 import numpy as np
 import pytest
-from typing import Dict
 from src import utils
 
 
 def test_plot_roc_curve(
     monkeypatch: pytest.MonkeyPatch
-)->None:
+) -> None:
     y_test = np.array([0, 0, 1, 1])
     model_probs_dict = {
         'model1': np.array([0.1, 0.4, 0.35, 0.8]),

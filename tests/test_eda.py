@@ -1,15 +1,19 @@
 import sys
 import os
+from src import eda
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import pytest
 from typing import Union, List
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src import eda
+sys.path.insert(
+    0,
+    os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+)
+
 
 def test_plot_target_distribution(
-)->None:
+) -> None:
     test_inputs: List[Union[List[int], pd.Series, np.ndarray]] = [
         [1, 2, 3, 4, 5, 3, 2],
         pd.Series([1, 2, 2, 3]),
@@ -19,9 +23,10 @@ def test_plot_target_distribution(
         eda.plot_target_distribution(y)
         plt.close()
 
+
 def test_summarize_target(
     capsys: pytest.CaptureFixture
-)->None:
+) -> None:
     y = pd.Series([0, 2, 2, 100, 0, 2, 100, 100])
     eda.summarize_target(y)
     captured = capsys.readouterr()

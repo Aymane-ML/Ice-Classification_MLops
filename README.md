@@ -1,30 +1,16 @@
-# 🧊 Classification de la Glace au Groenland à partir de Données Climatiques
+# Classification de la Glace au Groenland à partir de Données Climatiques
 
 Ce projet applique des techniques de **machine learning supervisé** pour prédire la **quantité de glace au Groenland** (faible ou élevée), en utilisant des données climatiques et environnementales. Le but est de développer un modèle robuste à partir de variables comme la température, les vents, la concentration de glace, etc.
 
 ---
 
-## 🎯 Objectif
+## Objectif
 
 Prédire une variable binaire représentant la quantité de glace (`élevée` ou `faible`), à partir d'un ensemble de variables explicatives climatiques. Les modèles sont évalués en fonction de leur capacité à bien distinguer ces deux classes.
 
 ---
 
-## 📁 Structure du projet
-
-Le projet suit une architecture simple et modulaire pour faciliter le développement et la maintenance :  
-
-- Un dossier `data/raw/` contient les fichiers de données brutes, conservés hors du contrôle de version.  
-- Le notebook `Ice_Classification.ipynb` centralise toutes les étapes d’analyse, de modélisation et d’évaluation.  
-- Le fichier `requirements.txt` liste les dépendances Python nécessaires.  
-- Le fichier `.gitignore` exclut notamment les données volumineuses et les fichiers temporaires.  
-- Le fichier `README.md` présente une documentation complète du projet.  
-- Un `Dockerfile` permet de conteneuriser l’application pour faciliter le déploiement et la reproductibilité.  
-- Des workflows GitHub Actions dans `.github/workflows/` automatisent les tests, le linting, et la construction/déploiement.
-
----
-
-## ⚙️ Méthodologie
+## Méthodologie
 
 1. **Prétraitement** : gestion des valeurs manquantes, standardisation des variables.  
 2. **Binarisation de la cible** : transformation de la variable `Y1` en variable binaire (faible vs élevée).  
@@ -40,7 +26,7 @@ Le projet suit une architecture simple et modulaire pour faciliter le développe
 
 ---
 
-## 🚀 Résultats
+## Résultats
 
 Les modèles Random Forest et Extra Trees ont obtenu les meilleurs résultats :  
 
@@ -52,17 +38,18 @@ Le seuil de décision a été ajusté pour maximiser le F1-score, avec des matri
 
 ---
 
-## 🛠 Librairies Python utilisées
+## Librairies Python utilisées
 
 - `pandas`  
 - `numpy`  
 - `scikit-learn`  
 - `matplotlib`  
-- `seaborn`  
+- `seaborn`
+- `mlflow`
 
 ---
 
-## 💾 Gestion des données et pipeline
+## Gestion des données et pipeline
 
 - Les données brutes sont stockées dans `data/raw/` (non versionnées dans Git pour éviter la surcharge du repo).  
 - Le notebook `Ice_Classification.ipynb` contient tout le pipeline : exploration, nettoyage, modélisation, validation et visualisation.  
@@ -80,15 +67,7 @@ Un fichier `Dockerfile` est fourni pour créer une image Docker contenant l’en
 
 ---
 
-**Commandes utiles :**
-
-```bash
-docker build -t ice-classification .
-docker run -it --rm ice-classification
-
----
-
-## ⚙️ Intégration Continue (CI) & Déploiement Continu (CD)
+## CI/CD
 
 Le projet utilise GitHub Actions pour automatiser :
 
@@ -101,22 +80,26 @@ Ces pratiques assurent une qualité constante et un déploiement sécurisé.
 
 ---
 
-## 📂 Fichiers du projet
+## Fichiers du projet
 
-| Fichier                        | Description                                                                 |
-|--------------------------------|-----------------------------------------------------------------------------|
-| `Ice_Classification.ipynb`     | Notebook Python avec tout le pipeline : nettoyage, modélisation, validation |
-| `data/raw/data_Features.csv`   | Données d'entrée : température, vents, glace de mer, décharges, etc.        |
-| `data/raw/data_Targets.csv`    | Variable cible (`Y1`), binarisée pour la classification                     |
-| `requirements.txt`             | Liste des librairies nécessaires à l’exécution du projet                    |
-| `Dockerfile`                   | Script pour construire l’image Docker du projet                             |
-| `.github/workflows/ci.yml`     | Pipeline GitHub Actions pour CI/CD                                          |
-| `.gitignore`                   | Fichiers et dossiers ignorés par Git                                        |
-| `README.md`                    | Documentation complète du projet                                            |
+| Fichier / Dossier              | Description                                                                                     |
+|--------------------------------|-------------------------------------------------------------------------------------------------|
+| `Ice_Classification.ipynb`     | Notebook Python avec : nettoyage, modélisation, optimisation, validation                        |
+| `data/raw/data_Features.csv`   | Données d'entrée : température, vents, glace de mer, décharges, etc.                            |
+| `data/raw/data_Targets.csv`    | Variable cible (`Y1`), binarisée pour la classification                                         |
+| `requirements.txt`             | Liste des librairies nécessaires à l’exécution du projet                                        |
+| `Dockerfile`                   | Script pour construire l’image Docker du projet                                                 |
+| `.github/workflows/ci.yml`     | Pipeline GitHub Actions pour CI/CD                                                              |
+| `.gitignore`                   | Fichiers et dossiers ignorés par Git                                                            |
+| `README.md`                    | Documentation complète du projet                                                                |
+| `src/`                         | Code source Python (préprocessing, modèles, utilitaires)                                        |
+| `models/`                      | Modèles entraînés, fichiers pickle, artefacts MLflow                                            |
+| `tests/`                       | Tests unitaires et d’intégration                                                                |
+| `k8s/`                         | Fichiers de configuration Kubernetes pour le déploiement                                        |
 
 ---
 
-## 🧪 Installation
+## Installation
 
 1. Cloner le repository :
 
@@ -127,10 +110,16 @@ cd ice-classification
 
 pip install -r requirements.txt
 
+ou bien:
+
+2 bis. Construire l'image Docker et lancer le container :
+
+docker build -t ice-classification:latest .
+docker run -p 8888:8888 ice-classification:latest
+
 ---
 
-## 📬 Auteurs
+## Auteur
 
 - **Aymane Mimoun**
-- **Mohtadi Hammami**.
 
