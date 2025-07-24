@@ -54,7 +54,7 @@ jobs:
       - name: Run notebook training
         run: |
           pip install nbconvert jupyter
-          jupyter nbconvert --to notebook --execute notebooks/Ice_Classification.ipynb --output executed.ipynb
+          jupyter nbconvert --to notebook --execute Ice_Classification.ipynb --output executed.ipynb
 
       - name: Upload trained model
         uses: actions/upload-artifact@v4
