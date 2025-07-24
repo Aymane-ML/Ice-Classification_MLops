@@ -57,10 +57,10 @@ jobs:
           jupyter nbconvert --to notebook --execute notebooks/Ice_Classification.ipynb --output executed.ipynb
 
       - name: Upload trained model
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: best_model
-          path: models/best_model.pkl
+          path: models/ExtraTreesClassifier_best_model.pkl
 
   build-and-push-docker:
     runs-on: ubuntu-latest
