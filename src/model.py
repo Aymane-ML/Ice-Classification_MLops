@@ -2,6 +2,7 @@ from typing import Dict, Any, List, Tuple
 import numpy as np
 import pandas as pd
 import mlflow
+mlflow.set_tracking_uri("file:///tmp/mlruns")
 import mlflow.sklearn
 from sklearn.base import clone
 from sklearn.base import BaseEstimator
