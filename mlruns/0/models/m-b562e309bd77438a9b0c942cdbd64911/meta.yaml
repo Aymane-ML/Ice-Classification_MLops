@@ -1,0 +1,10 @@
+artifact_location: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/models/m-b562e309bd77438a9b0c942cdbd64911/artifacts
+creation_timestamp: 1752845693305
+experiment_id: '0'
+last_updated_timestamp: 1752845698985
+model_id: m-b562e309bd77438a9b0c942cdbd64911
+model_type: null
+name: ExtraTreesClassifier_model
+source_run_id: 24b489aa36654cdeb24fed285947d9e4
+status: 2
+status_message: null

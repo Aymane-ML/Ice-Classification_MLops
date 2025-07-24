@@ -1,0 +1,22 @@
+artifact_path: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/models/m-b562e309bd77438a9b0c942cdbd64911/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.11.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.2.2
+mlflow_version: 3.1.1
+model_id: m-b562e309bd77438a9b0c942cdbd64911
+model_size_bytes: 5763653
+model_uuid: m-b562e309bd77438a9b0c942cdbd64911
+prompts: null
+run_id: 24b489aa36654cdeb24fed285947d9e4
+utc_time_created: '2025-07-18 13:34:53.332763'

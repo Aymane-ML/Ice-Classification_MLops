@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/c2106d0a588b4a26be72706ade02dc3e/artifacts
+end_time: 1752844153306
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c2106d0a588b4a26be72706ade02dc3e
+run_name: BaggingClassifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752844125771
+status: 3
+tags: []
+user_id: aymanemimoun

@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/ce57195702f34b54a47d293b7b7982a6/artifacts
+end_time: 1752845582506
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: ce57195702f34b54a47d293b7b7982a6
+run_name: RandomForestClassifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752845540073
+status: 3
+tags: []
+user_id: aymanemimoun

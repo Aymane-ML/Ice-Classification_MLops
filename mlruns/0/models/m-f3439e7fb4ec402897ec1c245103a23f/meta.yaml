@@ -1,0 +1,10 @@
+artifact_location: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/models/m-f3439e7fb4ec402897ec1c245103a23f/artifacts
+creation_timestamp: 1752844115789
+experiment_id: '0'
+last_updated_timestamp: 1752844125737
+model_id: m-f3439e7fb4ec402897ec1c245103a23f
+model_type: null
+name: RandomForestClassifier_model
+source_run_id: faf54a1583ad4fdf9b0853600b36c496
+status: 2
+status_message: null

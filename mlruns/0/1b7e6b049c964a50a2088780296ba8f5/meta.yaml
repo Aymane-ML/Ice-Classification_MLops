@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/1b7e6b049c964a50a2088780296ba8f5/artifacts
+end_time: 1752844242311
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 1b7e6b049c964a50a2088780296ba8f5
+run_name: ExtraTreesClassifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752844159847
+status: 3
+tags: []
+user_id: aymanemimoun

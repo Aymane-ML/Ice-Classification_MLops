@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/31092c2bbfe2482daa59d7000d1dd551/artifacts
+end_time: 1752844159824
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 31092c2bbfe2482daa59d7000d1dd551
+run_name: DecisionTreeClassifier
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1752844153331
+status: 3
+tags: []
+user_id: aymanemimoun

@@ -1,0 +1,10 @@
+artifact_location: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/models/m-547a180cd60b4ba8ab43a310b7195afa/artifacts
+creation_timestamp: 1752845614158
+experiment_id: '0'
+last_updated_timestamp: 1752845620308
+model_id: m-547a180cd60b4ba8ab43a310b7195afa
+model_type: null
+name: BaggingClassifier_model
+source_run_id: 211ced94f8054d4baeb15a92580f4aa1
+status: 2
+status_message: null

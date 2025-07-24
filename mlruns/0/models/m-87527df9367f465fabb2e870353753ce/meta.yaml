@@ -1,0 +1,10 @@
+artifact_location: file:///Users/aymanemimoun/Documents/M2%20Data%20Science/S1/ML/Machine%20Learning/Ice%20Classification/mlruns/0/models/m-87527df9367f465fabb2e870353753ce/artifacts
+creation_timestamp: 1752845622322
+experiment_id: '0'
+last_updated_timestamp: 1752845626107
+model_id: m-87527df9367f465fabb2e870353753ce
+model_type: null
+name: DecisionTreeClassifier_model
+source_run_id: f6719239cf2448ae8c9a0c6527459d68
+status: 2
+status_message: null
